@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.querySelector('.scroll-to-top');
-    l
+    
     function toggleScrollButton() {
         if (window.pageYOffset > 100) {
             scrollToTopBtn.classList.add('visible');
@@ -16,10 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    window.addEventListener('scroll', toggleScrollButton);
+    // Optimizar el evento scroll con throttle
+    const throttledToggle = throttle(toggleScrollButton, 100);
+    window.addEventListener('scroll', throttledToggle);
     
     scrollToTopBtn.addEventListener('click', scrollToTop);
 
+    // Verificar estado inicial
     toggleScrollButton();
 });
 
