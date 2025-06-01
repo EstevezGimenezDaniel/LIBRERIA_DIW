@@ -1,0 +1,36 @@
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.cart-actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  margin: 10% auto;
+  max-width: 400px;
+  border-radius: 8px;
+}

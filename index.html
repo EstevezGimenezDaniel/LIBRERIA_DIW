@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu-styles.css" />
+    <link rel="stylesheet" href="scroll-button.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="animaciones.css" />
+    <link rel="stylesheet" href="acordeon-pestanas.css" />
+
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <header class="main-header">
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="menu-icon">☰</span>
+      </button>
+      
+      <div class="logo">
+        <div class="logo-icon"></div>
+      </div>
+      
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+            >
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a
+              href="info-libreria.html"
+              class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+            >
+              Sobre nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+            >
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <a href="carrito.html" class="cta-button bg-lime-900 order-now" id="cart-icon">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg> 
+        Carrito
+      </a>
+
+      <div id="cart-preview" class="cart-preview hidden">
+        <ul id="cart-preview-list"></ul>
+        <a href="carrito.html" class="btn btn-primary btn-sm">Ir al carrito</a>
+      </div>
+
+    </header>
+
+    <main id="main-content">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">Animabook: La magia de los libros hoja por hoja</h1>
+            <p class="hero-description">
+              Sumérgete en la lectura con nuestra selección de libros únicos y descubre tu refugio literario
+            </p>
+            <button class="cta-button bg-lime-900 explore-btn">Ver Promociones</button>
+          </div>
+        </div>
+      </section>
+
+      <section style="height: 300px; overflow: hidden;">
+        <iframe src="banners/banner-libro.html"
+          style="width: 100%; height: 300px; border: none; display: block;"
+          title="Banner libro"></iframe>
+      </section>
+
+<section class="carousel-section">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Best Sellers</h2>
+      <p class="section-subtitle">
+        Descubre los libros que marcan tendencia. Nuestra selección de Best Sellers reúne las obras más leídas y aclamadas por los lectores, imprescindibles en cualquier biblioteca
+      </p>
+    </header>
+
+    <div class="carousel-container">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      
+      <button class="carousel-btn carousel-btn-next" aria-label="Siguiente">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+
+          <article class="carousel-slide product-card">
+            <div class="product-badge">Best Seller</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+            <div class="product-image">
+              <img src="images/libreria.jpg" alt="Libro Best Seller 1" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">El Nombre del Viento</h3>
+              <p class="product-author">Patrick Rothfuss</p>
+              <p class="product-price">24.99 € <span>/ ud</span></p>
+              <button class="buy-now">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg> 
+                </span>
+                Comprar
+              </button>
+            </div>
+          </article>
+
+          <article class="carousel-slide product-card">
+            <div class="product-badge">Best Seller</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+            <div class="product-image">
+              <img src="images/libreria.jpg" alt="Libro Best Seller 2" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Cien Años de Soledad</h3>
+              <p class="product-author">Gabriel García Márquez</p>
+              <p class="product-price">19.99 € <span>/ ud</span></p>
+              <button class="buy-now">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg> 
+                </span>
+                Comprar
+              </button>
+            </div>
+          </article>
+
+         <article class="carousel-slide product-card">
+            <div class="product-badge">Best Seller</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+            <div class="product-image">
+              <img src="images/libreria.jpg" alt="Libro Best Seller 3" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">1984</h3>
+              <p class="product-author">George Orwell</p>
+              <p class="product-price">16.99 € <span>/ ud</span></p>
+              <button class="buy-now">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg> 
+                </span>
+                Comprar
+              </button>
+            </div>
+          </article>
+
+          <article class="carousel-slide product-card">
+            <div class="product-badge">Best Seller</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+            <div class="product-image">
+              <img src="images/libreria.jpg" alt="Libro Best Seller 4" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">El Quijote</h3>
+              <p class="product-author">Miguel de Cervantes</p>
+              <p class="product-price">22.99 € <span>/ ud</span></p>
+              <button class="buy-now">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg> 
+                </span>
+                Comprar
+              </button>
+            </div>
+          </article>
+          
+          <article class="carousel-slide product-card">
+            <div class="product-badge">Best Seller</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+            <div class="product-image">
+              <img src="images/libreria.jpg" alt="Libro Best Seller 5" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Harry Potter</h3>
+              <p class="product-author">J.K. Rowling</p>
+              <p class="product-price">18.99 € <span>/ ud</span></p>
+              <button class="buy-now">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg> 
+                </span>
+                Comprar
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 6 -->
+          <article class="carousel-slide product-card">
+            <div class="product-badge">Best Seller</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+            <div class="product-image">
+              <img src="images/libreria.jpg" alt="Libro Best Seller 6" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">El Código Da Vinci</h3>
+              <p class="product-author">Dan Brown</p>
+              <p class="product-price">21.99 € <span>/ ud</span></p>
+              <button class="buy-now">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg> 
+                </span>
+                Comprar
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="carousel-indicators">
+        <button class="carousel-indicator active" data-slide="0" aria-label="Ir al slide 1"></button>
+        <button class="carousel-indicator" data-slide="1" aria-label="Ir al slide 2"></button>
+        <button class="carousel-indicator" data-slide="2" aria-label="Ir al slide 3"></button>
+        <button class="carousel-indicator" data-slide="3" aria-label="Ir al slide 4"></button>
+      </div>
+    </div>
+
+    <div class="pagination">Ver todos los Best Sellers</div>
+  </div>
+</section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="section-title">Consulta las reseñas de nuestros clientes</h2>
+            <p class="section-subtitle">
+              En este apartado podrás ver comentarios, opiniones y recomendaciones de los clientes que han decidido comprar en nuestra tienda
+            </p>
+          </div>
+          <button class="cta-button bg-teal-700 action-btn">
+            Ver reseñas
+          </button>
+        </div>
+      </section>
+
+      <section class="feature-section">
+        <div class="container">
+          <div class="feature-content">
+            <h2 class="section-title">Libro recomendado de la semana</h2>
+            <p class="section-subtitle">
+              Cada semana elegimos una obra que no puedes dejar pasar. Nuestro libro recomendado es una joya literaria que destaca por su calidad, historia y valor para el lector 
+            </p>
+          </div>
+          <div class="feature-image">
+            <img
+              src="images/libreria.jpg"
+              alt="Feature image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <div class="container">
+          <div class="gallery-content">
+            <h2 class="section-title">Recomendaciones del mes</h2>
+            <p class="section-subtitle">
+              Estas son las lecturas que han conquistado a nuestros clientes. Descubre los libros mejor valorados y más recomendados del mes por nuestra comunidad lectora.
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img
+                src="images/libreria.jpg"
+                alt="Gallery image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/libreria.jpg"
+                alt="Gallery image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/libreria.jpg"
+                alt="Gallery image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="testimonials-title">
+              Reseñas de nuestros clientes
+            </h2>
+            <p class="testimonials-subtitle">
+              La opinión de nuestros lectores importa. Descubre lo que otros clientes piensan sobre nuestros libros a través de sus valoraciones y experiencias reales 
+            </p>
+          </header>
+
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <header class="testimonial-header">
+                <p class="testimonial-name">Javier Morales</p>
+                <p class="testimonial-rating">4.5</p>
+              </header>
+              <p class="testimonial-text">
+                "Una historia que me atrapó desde la primera página. Hacía tiempo que no disfrutaba tanto con un libro. Totalmente recomendable."
+              </p>
+            </article>
+            <article class="testimonial-card">
+              <header class="testimonial-header">
+                <p class="testimonial-name">Laura Gómez</p>
+                <p class="testimonial-rating">4.5</p>
+              </header>
+              <p class="testimonial-text">
+               "Buena edición, llegó en perfectas condiciones y antes de lo esperado. El contenido es de calidad, ideal para regalar."
+              </p>
+            </article>
+            <article class="testimonial-card">
+              <header class="testimonial-header">
+                <p class="testimonial-name">Elena Ruiz</p>
+                <p class="testimonial-rating">4.5</p>
+              </header>
+              <p class="testimonial-text">
+                "Lo compré por recomendación y ha superado mis expectativas. Narrativa envolvente y personajes muy bien construidos."
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+ <section class="info-section">
+
+  
+<div class="container">
+            <section class="section">
+            <h2 class="section-title">Información de la Empresa</h2>
+
+            <div class="nav-tabs" role="tablist">
+                <button class="nav-link" 
+                        data-target="#contenido-historia" 
+                        role="tab" 
+                        aria-controls="contenido-historia" 
+                        aria-selected="false">
+                    <span class="status-indicator status-inactive"></span>
+                    Historia
+                </button>
+                <button class="nav-link" 
+                        data-target="#contenido-mision" 
+                        role="tab" 
+                        aria-controls="contenido-mision" 
+                        aria-selected="false">
+                    <span class="status-indicator status-inactive"></span>
+                    Misión
+                </button>
+                <button class="nav-link" 
+                        data-target="#contenido-vision" 
+                        role="tab" 
+                        aria-controls="contenido-vision" 
+                        aria-selected="false">
+                    <span class="status-indicator status-inactive"></span>
+                    Visión
+                </button>
+                <button class="nav-link" 
+                        data-target="#contenido-valores" 
+                        role="tab" 
+                        aria-controls="contenido-valores" 
+                        aria-selected="false">
+                    <span class="status-indicator status-inactive"></span>
+                    Valores
+                </button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane" id="contenido-historia" role="tabpanel" aria-labelledby="tab-historia">
+                    <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Nuestros Orígenes</h4>
+                    <p>Animabook comenzó su viaje en 2018 con la intención de conectar a lectores apasionados con historias inolvidables. Fundada por un grupo de bibliófilos en Granada, nuestra librería nació del deseo de crear un espacio donde la literatura cobra vida y cada libro encuentra su lector ideal.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: var(--color-text-light);">Desde entonces, hemos crecido hasta convertirnos en una referencia para los amantes de la lectura en toda Andalucía.</p>
+                </div>
+                
+                <div class="tab-pane" id="contenido-mision" role="tabpanel" aria-labelledby="tab-mision">
+                    <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Nuestra Misión</h4>
+                    <p>Nuestra misión es democratizar el acceso a la lectura y fomentar la cultura literaria en todos los rincones. Creemos que cada persona merece tener acceso a libros de calidad, independientemente de su ubicación o situación económica.</p>
+                    <p style="margin-top: 1rem;">Trabajamos incansablemente para ofrecer una experiencia de compra excepcional, con envíos rápidos, atención personalizada y precios competitivos que hacen la lectura accesible para todos.</p>
+                </div>
+                
+                <div class="tab-pane" id="contenido-vision" role="tabpanel" aria-labelledby="tab-vision">
+                    <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Nuestra Visión</h4>
+                    <p>Aspiramos a ser la librería de referencia en el ámbito digital, innovando constantemente en la experiencia lectora. Visualizamos un futuro donde la tecnología y la tradición literaria se fusionen para crear experiencias únicas de descubrimiento y lectura.</p>
+                    <p style="margin-top: 1rem;">Queremos ser reconocidos no solo por nuestro catálogo, sino por nuestra capacidad de conectar lectores con las obras que realmente transformarán sus vidas.</p>
+                </div>
+                
+                <div class="tab-pane" id="contenido-valores" role="tabpanel" aria-labelledby="tab-valores">
+                    <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Nuestros Valores</h4>
+                    <p><strong>Pasión por la lectura:</strong> Cada miembro de nuestro equipo es un lector apasionado que entiende el poder transformador de los libros.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Calidad:</strong> Seleccionamos cuidadosamente cada título de nuestro catálogo para garantizar experiencias literarias excepcionales.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Comunidad:</strong> Fomentamos una comunidad de lectores donde las recomendaciones y el intercambio de ideas enriquecen la experiencia de todos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button" 
+                            type="button" 
+                            data-target="#collapseOne" 
+                            aria-expanded="false" 
+                            aria-controls="collapseOne">
+                        ¿Cómo puedo realizar un pedido?
+                    </button>
+                    <div id="collapseOne" class="accordion-collapse" aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <p>Realizar un pedido en Animabook es muy sencillo. Solo tienes que navegar por nuestro catálogo, seleccionar los libros que desees y agregarlos al carrito de compras. Una vez que hayas terminado de seleccionar, procede al checkout donde podrás elegir tu método de pago y dirección de envío.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" 
+                            type="button" 
+                            data-target="#collapseTwo" 
+                            aria-expanded="false" 
+                            aria-controls="collapseTwo">
+                        ¿Cuáles son los métodos de pago disponibles?
+                    </button>
+                    <div id="collapseTwo" class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>Aceptamos varios métodos de pago para tu comodidad: tarjetas de crédito y débito (Visa, Mastercard, American Express), PayPal, transferencias bancarias y pago contra reembolso en determinadas zonas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" 
+                            type="button" 
+                            data-target="#collapseThree" 
+                            aria-expanded="false" 
+                            aria-controls="collapseThree">
+                        ¿Cuánto tiempo tarda en llegar mi pedido?
+                    </button>
+                    <div id="collapseThree" class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>Los tiempos de entrega varían según tu ubicación: 24-48 horas en Granada y provincia, 2-3 días laborables en el resto de Andalucía, y 3-5 días laborables para el resto de España. Para envíos internacionales, el tiempo puede ser de 5-10 días laborables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <button class="scroll-to-top" aria-label="Volver arriba" title="Volver arriba">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 24px; height: 24px;">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+      </svg>
+    </button>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-branding">
+            <h3 class="footer-logo">
+              <div class="logo-icon"></div>
+            </h3>
+            <p class="footer-description">
+              Nuestro objetivo es proporcionar conveniencia y ayuda.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Facebook">f</a>
+              <a href="#" class="social-icon" aria-label="Twitter">t</a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Sobre</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Cómo funciona</a></li>
+              <li><a href="#" class="footer-link">Destacados</a></li>
+              <li><a href="#" class="footer-link">Colaboraciones</a></li>
+              <li><a href="#" class="footer-link">Relacion comercial</a></li>
+              <li><a href="info-libreria.html" class="footer-link">Información de la Librería</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Comunidad</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Eventos</a></li>
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Podcast</a></li>
+              <li><a href="#" class="footer-link">Invita a un amigo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Social</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Discord</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Twitter</a></li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">©2025 Animabook. Todos los derechos reservados</p>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-bottom-link">Política de privacidad</a>
+            <a href="#" class="footer-bottom-link">Términos y condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="animaciones.js"></script>
+    <script src="menu.js"></script>
+    <script src="scroll-button.js"></script>
+    <script src="carousel.js"></script>
+    <script src="acordeon-pestanas.js"></script>
+    <script src="cart-storage.js"></script>
+    <script src="cart-storage.js"></script>
+    <script src="cart-dropdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

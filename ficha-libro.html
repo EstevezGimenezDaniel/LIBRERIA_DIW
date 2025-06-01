@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Nombre del Viento - BookStore</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu-styles.css" />
+    <link rel="stylesheet" href="ficha-libro.css" />
+    <link rel="stylesheet" href="cart-dropdown.css">
+
+
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+<header class="main-header">
+  <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
+    <span class="menu-icon">☰</span>
+  </button>
+  
+  <div class="logo">
+    <div class="logo-icon"></div>
+  </div>
+  
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li>
+        <a
+          href="index.html"
+          class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+        >
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a
+          href="info-libreria.html"
+          class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+        >
+          Sobre nosotros
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+        >
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <a href="#" class="cta-button bg-lime-900 order-now">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+    </svg> 
+    Carrito
+  </a>
+</header>
+
+    <main>
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="fantasía.html">Fantasía</a></li>
+            <li class="active">El Nombre del Viento</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="book-details">
+        <div class="container">
+          <div class="book-details-grid">
+            <div class="book-images">
+              <div class="book-main-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de El Nombre del Viento"
+                  id="main-book-image"
+                />
+                <button
+                  class="favorite-btn-large"
+                  aria-label="Añadir a favoritos"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+
+            <div class="book-info-container">
+              <header class="book-header">
+                <h1 class="book-title">El Nombre del Viento</h1>
+                <div class="book-meta">
+                  <p class="book-author">
+                    Por <a href="#">Patrick Rothfuss</a>
+                  </p>
+                  <div class="book-rating">
+                    <div class="stars">
+                      <span class="star filled">★</span>
+                      <span class="star filled">★</span>
+                      <span class="star filled">★</span>
+                      <span class="star filled">★</span>
+                      <span class="star half">★</span>
+                    </div>
+                    <span class="rating-count">4.5 (2.341 reseñas)</span>
+                  </div>
+                </div>
+              </header>
+
+              <div class="book-pricing">
+                <div class="price-info">
+                  <p class="current-price">19.99€</p>
+                </div>
+                <p class="tax-info">Impuestos incluidos</p>
+              </div>
+
+              <div class="book-description">
+                <h2>Descripción</h2>
+                <p>
+                  "El nombre del viento" (The Name of the Wind) es la primera
+                  novela de la trilogía "Crónica del asesino de reyes" del autor
+                  estadounidense Patrick Rothfuss. La historia sigue a Kvothe,
+                  un legendario músico, mago y aventurero, ahora oculto como
+                  posadero bajo una identidad falsa.
+                </p>
+                <p>
+                  Cuando un cronista lo descubre y le pide que relate su
+                  historia, Kvothe accede a contarla en tres días (cada día
+                  corresponde a un libro de la trilogía). La novela es una
+                  narración en primera persona de su vida desde su niñez como
+                  parte de una troupe de artistas itinerantes, la tragedia que
+                  lo dejó huérfano, sus años de supervivencia como niño de la
+                  calle, y su admisión a la Universidad donde estudia artes
+                  arcanas.
+                </p>
+              </div>
+
+              <div class="book-details-meta">
+                <div class="details-item">
+                  <span class="detail-label">Editorial:</span>
+                  <span class="detail-value">Plaza & Janés</span>
+                </div>
+                <div class="details-item">
+                  <span class="detail-label">Año de publicación:</span>
+                  <span class="detail-value">2007</span>
+                </div>
+                <div class="details-item">
+                  <span class="detail-label">Idioma:</span>
+                  <span class="detail-value">Español</span>
+                </div>
+                <div class="details-item">
+                  <span class="detail-label">Páginas:</span>
+                  <span class="detail-value">662</span>
+                </div>
+                <div class="details-item">
+                  <span class="detail-label">ISBN:</span>
+                  <span class="detail-value">9788401352836</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-purchase">
+              <div class="purchase-card">
+                <div class="quantity-selector">
+                  <h3>Cantidad</h3>
+                  <div class="quantity-control">
+                    <button
+                      class="quantity-btn decrease"
+                      aria-label="Disminuir cantidad"
+                    >
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      max="10"
+                      class="quantity-input"
+                    />
+                    <button
+                      class="quantity-btn increase"
+                      aria-label="Aumentar cantidad"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div class="purchase-actions">
+                  <button class="primary-button add-to-cart">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg> 
+                    </span>
+                    Añadir al carrito
+                  </button>
+                </div>
+              </div>
+
+              <div class="delivery-info">
+                <h3>Información de entrega</h3>
+                <div class="delivery-option">
+                  <div class="delivery-icon"></div>
+                  <div class="delivery-details">
+                    <p class="delivery-title">Envío estándar</p>
+                    <p class="delivery-description">
+                      Entrega en 3-5 días laborables
+                    </p>
+                    <p class="delivery-price">
+                      Gratis en pedidos superiores a 25€
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="related-books">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">También te puede interesar</h2>
+            <p class="section-subtitle">
+              Libros relacionados que podrían gustarte
+            </p>
+          </header>
+
+          <div class="products-grid">
+            <article class="product-card">
+              <div class="product-badge">Bestseller</div>
+              <button class="favorite-btn" aria-label="Add to favorites">
+                ♡
+              </button>
+              <div class="product-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de El Temor de un Hombre Sabio"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">El Temor de un Hombre Sabio</h3>
+                <p class="product-author">Patrick Rothfuss</p>
+                <p class="product-price">
+                  22.99€ <span class="discount">24.99€</span>
+                </p>
+                <button class="buy-now">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg> 
+                  </span>
+                  Añadir al carrito
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-badge">Nuevo</div>
+              <button class="favorite-btn" aria-label="Add to favorites">
+                ♡
+              </button>
+              <div class="product-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de El Imperio Final"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">El Imperio Final</h3>
+                <p class="product-author">Brandon Sanderson</p>
+                <p class="product-price">18.50€</p>
+                <button class="buy-now">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg> 
+                  </span>
+                  Añadir al carrito
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <button class="favorite-btn" aria-label="Add to favorites">
+                ♡
+              </button>
+              <div class="product-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de Juego de Tronos"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Juego de Tronos</h3>
+                <p class="product-author">George R. R. Martin</p>
+                <p class="product-price">
+                  15.99€ <span class="discount">19.99€</span>
+                </p>
+                <button class="buy-now">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg> 
+                  </span>
+                  Añadir al carrito
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <button class="favorite-btn" aria-label="Add to favorites">
+                ♡
+              </button>
+              <div class="product-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de Los Jardines de la Luna"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Los Jardines de la Luna</h3>
+                <p class="product-author">Steven Erikson</p>
+                <p class="product-price">17.50€</p>
+                <button class="buy-now">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg> 
+                  </span>
+                  Añadir al carrito
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-branding">
+            <h3 class="footer-logo">
+              <div class="logo-icon"></div>
+            </h3>
+            <p class="footer-description">
+              Nuestro objetivo es proporcionar conveniencia y ayuda.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Facebook">f</a>
+              <a href="#" class="social-icon" aria-label="Twitter">t</a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Sobre</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Cómo funciona</a></li>
+              <li><a href="#" class="footer-link">Destacados</a></li>
+              <li><a href="#" class="footer-link">Colaboraciones</a></li>
+              <li><a href="#" class="footer-link">Relacion comercial</a></li>
+              <li><a href="info-libreria.html" class="footer-link">Información de la Librería</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Comunidad</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Eventos</a></li>
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Podcast</a></li>
+              <li><a href="#" class="footer-link">Invita a un amigo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Social</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Discord</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Twitter</a></li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">©2025 Animabook. Todos los derechos reservados</p>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-bottom-link">Política de privacidad</a>
+            <a href="#" class="footer-bottom-link">Términos y condiciones</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="cart-storage.js"></script>
+    <script src="cart-dropdown.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('lite') === 'true') {
+        const header = document.querySelector('header.main-header');
+      if (header) header.style.display = 'none';
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+</html>

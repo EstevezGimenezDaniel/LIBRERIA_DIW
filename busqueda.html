@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Búsqueda de Libros - BookStore</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu-styles.css" />
+    <link rel="stylesheet" href="busqueda.css" />
+    <link rel="stylesheet" href="cart-dropdown.css">
+
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+<header class="main-header">
+  <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
+    <span class="menu-icon">☰</span>
+  </button>
+  
+  <div class="logo">
+    <div class="logo-icon"></div>
+  </div>
+  
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li>
+        <a
+          href="index.html"
+          class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+        >
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a
+          href="info-libreria.html"
+          class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+        >
+          Sobre nosotros
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="nav-link hover:bg-lime-900 inline-block !px-5 !py-1 rounded-sm hover:text-white focus-within:text-white"
+        >
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <a href="#" class="cta-button bg-lime-900 order-now">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+    </svg> 
+    Carrito
+  </a>
+</header>
+
+    <main>
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs-list">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Búsqueda</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="search-section">
+        <div class="container">
+          <header class="section-header">
+            <h1 class="section-title">Búsqueda de Libros</h1>
+            <p class="section-subtitle">
+              Encuentra tus libros favoritos por ISBN, título o autor
+            </p>
+          </header>
+
+          <form class="search-form">
+            <div class="form-group">
+              <label for="isbn">ISBN</label>
+              <input
+                type="text"
+                id="isbn"
+                name="isbn"
+                placeholder="Ej: 9788401352836"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="title">Título</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Ej: El Nombre del Viento"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="author">Autor</label>
+              <input
+                type="text"
+                id="author"
+                name="author"
+                placeholder="Ej: Patrick Rothfuss"
+              />
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="search-button bg-lime-900">
+                <span class="search-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>                  
+                </span>
+                Buscar
+              </button>
+              <button type="reset" class="reset-button">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="search-results">
+        <div class="container">
+          <div class="results-header">
+            <h2 class="results-title">Resultados de búsqueda</h2>
+            <div class="results-info">
+              <p class="results-count">
+                Se encontraron <strong>12</strong> resultados
+              </p>
+              <div class="results-sort">
+                <label for="sort-by">Ordenar por:</label>
+                <select id="sort-by" name="sort-by">
+                  <option value="relevance">Relevancia</option>
+                  <option value="price-low">Precio: Menor a Mayor</option>
+                  <option value="price-high">Precio: Mayor a Menor</option>
+                  <option value="title">Título</option>
+                  <option value="author">Autor</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="results-container">
+            <article class="book-card">
+              <div class="book-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de El Nombre del Viento"
+                />
+                <button class="favorite-btn" aria-label="Añadir a favoritos">
+                  ♡
+                </button>
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">
+                  <a href="ficha-libro.html">El Nombre del Viento</a>
+                </h3>
+                <p class="book-author">Patrick Rothfuss</p>
+                <div class="book-rating">
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star half">★</span>
+                  </div>
+                  <span class="rating-count">(2.341)</span>
+                </div>
+                <div class="book-meta">
+                  <p class="book-isbn">ISBN: 9788401352836</p>
+                  <p class="book-format">Tapa blanda</p>
+                </div>
+                <div class="book-price">
+                  <p class="current-price">19.99€</p>
+                  <p class="original-price">24.99€</p>
+                </div>
+                <div class="book-actions">
+                  <a href="ficha-libro.html" class="view-button"
+                    >Ver detalles</a
+                  >
+                  <button class="add-cart-button">
+                    <span class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="book-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de El Temor de un Hombre Sabio"
+                />
+                <button class="favorite-btn" aria-label="Añadir a favoritos">
+                  ♡
+                </button>
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">
+                  <a href="ficha-libro.html">El Temor de un Hombre Sabio</a>
+                </h3>
+                <p class="book-author">Patrick Rothfuss</p>
+                <div class="book-rating">
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">★</span>
+                  </div>
+                  <span class="rating-count">(1.879)</span>
+                </div>
+                <div class="book-meta">
+                  <p class="book-isbn">ISBN: 9788401352843</p>
+                  <p class="book-format">Tapa blanda</p>
+                </div>
+                <div class="book-price">
+                  <p class="current-price">22.99€</p>
+                </div>
+                <div class="book-actions">
+                  <a href="ficha-libro.html" class="view-button"
+                    >Ver detalles</a
+                  >
+                  <button class="add-cart-button">
+                    <span class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="book-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de Crónicas del Asesino de Reyes"
+                />
+                <button class="favorite-btn" aria-label="Añadir a favoritos">
+                  ♡
+                </button>
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">
+                  <a href="ficha-libro.html"
+                    >Crónicas del Asesino de Reyes: Pack con El Nombre del
+                    Viento y El Temor de un Hombre Sabio</a
+                  >
+                </h3>
+                <p class="book-author">Patrick Rothfuss</p>
+                <div class="book-rating">
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">★</span>
+                  </div>
+                  <span class="rating-count">(956)</span>
+                </div>
+                <div class="book-meta">
+                  <p class="book-isbn">ISBN: 9788401354632</p>
+                  <p class="book-format">Pack Especial</p>
+                </div>
+                <div class="book-price">
+                  <p class="current-price">39.99€</p>
+                  <p class="original-price">49.99€</p>
+                </div>
+                <div class="book-actions">
+                  <a href="ficha-libro.html" class="view-button"
+                    >Ver detalles</a
+                  >
+                  <button class="add-cart-button">
+                    <span class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="book-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de La Música del Silencio"
+                />
+                <button class="favorite-btn" aria-label="Añadir a favoritos">
+                  ♡
+                </button>
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">
+                  <a href="ficha-libro.html">La Música del Silencio</a>
+                </h3>
+                <p class="book-author">Patrick Rothfuss</p>
+                <div class="book-rating">
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star half">★</span>
+                    <span class="star">★</span>
+                  </div>
+                  <span class="rating-count">(743)</span>
+                </div>
+                <div class="book-meta">
+                  <p class="book-isbn">ISBN: 9788401354229</p>
+                  <p class="book-format">Tapa dura</p>
+                </div>
+                <div class="book-price">
+                  <p class="current-price">16.99€</p>
+                </div>
+                <div class="book-actions">
+                  <a href="ficha-libro.html" class="view-button"
+                    >Ver detalles</a
+                  >
+                  <button class="add-cart-button">
+                    <span class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="book-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de El Nombre del Viento - Edición 10º Aniversario"
+                />
+                <button class="favorite-btn" aria-label="Añadir a favoritos">
+                  ♡
+                </button>
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">
+                  <a href="ficha-libro.html"
+                    >El Nombre del Viento - Edición 10º Aniversario</a
+                  >
+                </h3>
+                <p class="book-author">Patrick Rothfuss</p>
+                <div class="book-rating">
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                  </div>
+                  <span class="rating-count">(521)</span>
+                </div>
+                <div class="book-meta">
+                  <p class="book-isbn">ISBN: 9788401356732</p>
+                  <p class="book-format">Edición Especial</p>
+                </div>
+                <div class="book-price">
+                  <p class="current-price">34.99€</p>
+                </div>
+                <div class="book-actions">
+                  <a href="ficha-libro.html" class="view-button"
+                    >Ver detalles</a
+                  >
+                  <button class="add-cart-button">
+                    <span class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="book-image">
+                <img
+                  src="images/libreria.jpg"
+                  alt="Portada de Auri y El Nombre del Viento - Pack"
+                />
+                <button class="favorite-btn" aria-label="Añadir a favoritos">
+                  ♡
+                </button>
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">
+                  <a href="ficha-libro.html"
+                    >Auri y El Nombre del Viento - Pack</a
+                  >
+                </h3>
+                <p class="book-author">Patrick Rothfuss</p>
+                <div class="book-rating">
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star half">★</span>
+                    <span class="star">★</span>
+                  </div>
+                  <span class="rating-count">(362)</span>
+                </div>
+                <div class="book-meta">
+                  <p class="book-isbn">ISBN: 9788401357832</p>
+                  <p class="book-format">Pack Especial</p>
+                </div>
+                <div class="book-price">
+                  <p class="current-price">29.99€</p>
+                  <p class="original-price">36.99€</p>
+                </div>
+                <div class="book-actions">
+                  <a href="ficha-libro.html" class="view-button"
+                    >Ver detalles</a
+                  >
+                  <button class="add-cart-button">
+                    <span class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-branding">
+            <h3 class="footer-logo">
+              <div class="logo-icon"></div>
+            </h3>
+            <p class="footer-description">
+              Our vision is to provide convenience and help increase your sales
+              business.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Facebook">f</a>
+              <a href="#" class="social-icon" aria-label="Twitter">t</a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">About</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">How it works</a></li>
+              <li><a href="#" class="footer-link">Featured</a></li>
+              <li><a href="#" class="footer-link">Partnership</a></li>
+              <li><a href="#" class="footer-link">Business Relation</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Community</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Events</a></li>
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Podcast</a></li>
+              <li><a href="#" class="footer-link">Invite a friend</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3 class="footer-title">Socials</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Discord</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Twitter</a></li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">©2023 Company Name. All rights reserved</p>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-bottom-link">Privacy & Policy</a>
+            <a href="#" class="footer-bottom-link">Terms & Condition</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="cart-storage.js"></script>
+    <script src="cart-dropdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  </body>
+</html>

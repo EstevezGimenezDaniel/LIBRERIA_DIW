@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Libro</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: transparent;
+    }
+    .banner-container {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(90deg, #b3be7e, #283618);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      box-sizing: border-box;
+      color: white;
+      animation: fadeBanner 1s ease-in-out;
+    }
+    @keyframes fadeBanner {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .banner-text {
+      font-size: 2rem;
+      font-weight: bold;
+      animation: slideIn 2s ease-out;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .banner-button {
+      background-color: #fff;
+      color: #283618;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .banner-button:hover {
+      background-color: #e6edd6;
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      .banner-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        height: auto;
+      }
+      .banner-text {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+      .banner-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <div class="banner-text">
+      📖 ¡Descubre "El Nombre del Viento" hoy!
+    </div>
+    <a href="../ficha-libro.html?lite=true" class="banner-button">
+      Ver Libro
+    </a>
+  </div>
+</body>
+</html>
